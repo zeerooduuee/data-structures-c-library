@@ -1,11 +1,10 @@
 # data-structures-cpp-library
-version 1.0 for the data structure library implemented in c++
+version 1.0 for my data structures library implemented in c++
 
 disclaimer:
 1. data structures are missing components and algorithms that will be implemented in future versions
-2. not everything is implemented for all data structures, implementations are general so that they can then be
-modified according to specifics or even translated into other languages like c, c# or java
-3. testing has not been applied to any of the files and implementations
+2. not everything is implemented for all data structures, implementations are more general so that they can be usefult for learning and translating into other languages like c, c# or java
+3. testing has not been done on any of the files
 
 contents:
 1. vectors
