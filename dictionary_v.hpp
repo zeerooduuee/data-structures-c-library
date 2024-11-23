@@ -8,6 +8,7 @@
  * a dictionary can thus be viewed as a set of associations (records) of type (KEY (K), VALUE or DATA (V / D)).
  */
 /* implementation using an ordered array (vector) of elements (order is provided on the keys) */
+
 #include <iostream>
 #include <stdexcept>
 #include <vector>
