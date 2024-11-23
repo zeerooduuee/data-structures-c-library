@@ -2,16 +2,18 @@
 #define STRUTTUREDATI_STACK_VECTORS_HPP
 
 /*
- * stacks are data structures that follow the FILO mechanism, that is first in last out or also known as FCLS (first come last served)
- * meaning that the first element that is written is the last to be read and the last to be written is the first to be read
-*/
+ * stacks are data_ structures that operate on the FILO (First In, Last Out) principle,
+ * also referred to as FCLS (First Come, Last Served).
+ * this means the first element added to the stack is the last one to be removed,
+ * while the most recently added element is the first to be accessed.
+ */
 
 #include <iostream>
 #include <stdexcept>
 #include <vector>
 
-namespace sd {
-    namespace vectors {
+namespace ds {
+    namespace v {
         template <typename T>
         class stack {
         private:
@@ -37,6 +39,16 @@ namespace sd {
             }
             size_t size() const {
                 return a.size();
+            }
+            void display() const {
+                std::cout << "stack: { ";
+                for (auto it = a.begin(); it != a.end(); ++it) {
+                    std::cout << *it;
+                    if (std::next(it) != a.end()) {
+                        std::cout << ", ";
+                    }
+                }
+                std::cout << " }" << std::endl;
             }
         protected:
         };

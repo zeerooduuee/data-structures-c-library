@@ -1,28 +1,23 @@
 #ifndef STRUTTURE_DATI_LIST_HPP
 #define STRUTTURE_DATI_LIST_HPP
 
-/* implementation for doubly linked lists and circular lists is not provided */
+/* implementations for doubly linked l and circular linked l are not provided */
 /*
- * doubly linked: same as singly linked lists (provided below) but you not only have head pointer but also tail pointer
- * and each node has a pointer to the next and previous node, so it is easier to iterate over it,
- * but it is important to make sure everything is correctly implemented
-*/
+ * a doubly linked list is a type of linked list where each node contains references to both the next and
+ * the previous nodes in the sequence. this structure includes a head pointer that references the first
+ * node and a tail pointer that references the last node, allowing efficient traversal in both directions.
+ */
 /*
- * circular lists: same as singly linked lists (provided below) but here the implementation doesn't support an actual starting and finishing point
- * there is a flag (any node) that is considered the start, and then you iterate over the list not until next is nullptr (meaning the end was reached),
- * but until you reach the same node the iteration started from, you do so using do while loops instead of dimple whiles, because otherwise the finishing condition
- * wouldn't even let you start the first iteration of the loop (current != start) and current starts as current = start, so first you iterate once and then condition starts
- * making sense
- * last important thing is that all nodes are connected using a next pointer, but there isn't a last node that has next == nullptr,
- * but eventually one node's next will be another node address, usually unless specified it is more efficient to add and remove nodes one node after the start (start->next)
- *
- * a circular list is a linked list where the last node points back to the first node, it can be either singly or doubly linked
-*/
+ * a circular linked list is a variation of a linked list in which the last node is connected back to the first node,
+ * forming a continuous loop. It can be implemented as either singly or doubly linked. Unlike standard linked l,
+ * circular linked l often utilize do-while loops instead of while loops for traversal, and instead of a head pointer,
+ * a start flag is typically used to mark the beginning of the list.
+ */
 
 #include <iostream>
 #include <stdexcept>
 
-namespace sd {
+namespace ds {
     template <typename T>
     class list {
     private:
@@ -227,6 +222,18 @@ namespace sd {
         }
         iterator end() {
             return iterator(nullptr);
+        }
+        void display() const {
+            std::cout << "list: { ";
+            node* current = head;
+            while(current) {
+                std::cout << current->data;
+                if(current->next) {
+                    std::cout << ", ";
+                }
+                current = current->next;
+            }
+            std::cout << " }" << std::endl;
         }
     protected:
     };

@@ -4,38 +4,38 @@
 #include <iostream>
 #include <stdexcept>
 
-namespace sd {
+namespace ds {
     template <typename T>
     class vector {
     private:
-        T* data;
+        T* data_;
         size_t capacity_;
         size_t size_;
 
         void resize(size_t new_capacity) {
             T* new_data = new T[new_capacity];
             for(size_t i = 0; i != size_; ++i) {
-                new_data[i] = data[i];
+                new_data[i] = data_[i];
             }
-            delete[] data;
-            data = new_data;
+            delete[] data_;
+            data_ = new_data;
             capacity_ = new_capacity;
         }
     public:
         /* constructor */
-        vector() : data(new T[1]), capacity_(1), size_(0) {}
+        vector() : data_(new T[1]), capacity_(1), size_(0) {}
         /* desctructor */
         ~vector() {
-            delete[] data;
+            delete[] data_;
             capacity_ = 0; // not really needed
             size_ = 0; // not really needed
         }
         /* add element */
-        void push_back(const T& data) {
+        void push_back(T const& data) {
             if (size_ == capacity_) {
                 resize(capacity_ * 2);
             }
-            data[size_++] = data;
+            data_[size_++] = data;
         }
         /* remove element */
         void pop_back() {
@@ -51,34 +51,34 @@ namespace sd {
             if(size_ == 0) {
                 throw std::out_of_range("ERROR: 'front' method call on empty vector");
             }
-            return data[0];
+            return data_[0];
         }
         T back() const {
             if(size_ == 0) {
                 throw std::out_of_range("ERROR: 'back' method call on empty vector");
             }
-            return data[size_ - 1];
+            return data_[size_ - 1];
         }
         /* access element by index */
         // []
         T& operator[](size_t index) {
-            return data[index];
+            return data_[index];
         }
         T const& operator[](size_t index) const {
-            return data[index];
+            return data_[index];
         }
         // at()
         T& at(size_t index) {
             if (index >= size_) {
                 throw std::out_of_range("ERROR: index out of range on method call 'at()'");
             }
-            return data[index];
+            return data_[index];
         }
         T const& at(size_t index) const {
             if (index >= size_) {
                 throw std::out_of_range("ERROR: index out of range on method call 'at()'");
             }
-            return data[index];
+            return data_[index];
         }
         /* getters */
         size_t size() const {
@@ -93,8 +93,8 @@ namespace sd {
         }
         /* clear */
         void clear() {
-            delete[] data;
-            data = new T[1];
+            delete[] data_;
+            data_ = new T[1];
             capacity_ = 1;
             size_ = 0;
         }
@@ -133,11 +133,22 @@ namespace sd {
         };
         // begin iterator
         iterator begin() {
-            return iterator(data);
+            return iterator(data_);
         }
         // end iterator
         iterator end() {
-            return iterator(data + size_);
+            return iterator(data_ + size_);
+        }
+        // display
+        void display() const {
+            std::cout << "vector: { ";
+            for(size_t i = 0; i != size_; ++i) {
+                std::cout << data_[i];
+                if(i != (size_ - 1)) {
+                    std::cout << ", ";
+                }
+            }
+            std::cout << " }" << std::endl;
         }
     protected:
     };
