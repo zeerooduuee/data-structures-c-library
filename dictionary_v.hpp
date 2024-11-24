@@ -67,11 +67,11 @@ namespace ds {
                 }
             }
             /* K deve essere presente nel dizionario, il metodo cancella da questo la coppia avente chiave K */
-            // pop sta per delete ma delete e' anche keyword diel linguaggio
-            void pop(A const& k) {
+            // erase sta per delete ma delete e' anche keyword del linguaggio
+            void erase(A const& k) {
                 int i = search_index(k, 0, a.size());
                 if(i == -1) {
-                    throw std::logic_error("ERROR: 'pop' method call on key not found on dictionary");
+                    throw std::logic_error("ERROR: 'erase' method call on key not found on dictionary");
                 }
                 for(int j = i; j != (a.size() - 1); ++j) {
                     a[j] = a[j + 1];
