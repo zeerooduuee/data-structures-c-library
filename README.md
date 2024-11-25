@@ -12,9 +12,9 @@ implemented:
 2. lists, singly linked lists (doubly linked and circular linked lists planned for future versions)
 3. stacks, implemented using both lists and vectors
 4. queues, implemented using both lists and vectors
+5. dictionaries
 
 coming in future versions:
-1. dictionaries
 2. trees
 3. sets
 4. pairs
