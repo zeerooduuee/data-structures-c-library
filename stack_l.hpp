@@ -24,7 +24,7 @@ namespace ds {
             }
             void pop() {
                 if(a.empty()) {
-                    throw std::out_of_range("ERROR: 'pop' method call on empty stack");
+                    throw std::out_of_range("ERROR: 'erase' method call on empty stack");
                 }
                 a.pop_front();
             }

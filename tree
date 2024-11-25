@@ -1,0 +1,39 @@
+alberi come concetto e definizione
+
+gli alberi sono una struttura dati gerarchica, formata da nodi (nodes) e archi (edges o links) che collegano i nodi tra di loro, sia i nodi che gli archi possono contenere informazioni
+
+cosa sono?
+matematicamente un albero radicato (cioe con radice) è una coppia T = (N, A) dove:
+• N è un insieme finito di nodi fra cui si distingue un nodo r detto radice
+• A ⊆ N × N è un insieme di coppie di nodi, detti archi (nodi in associazione)
+in un albero, ogni nodo v (eccetto la radice) ha esattamente un genitore (o
+padre) u tale che esiste un arco (u, v) ∈ A.
+
+propieta e definizioni relative a gli alberi
+• un nodo n può avere zero o più figli v tali che esiste un arco (u, v) ∈ A.
+• il numero dei figli di un nodo è detto grado del nodo.
+• un nodo senza figli (grado zero) è detto foglia (o nodo esterno, ma non
+useremo questo termine).
+• un nodo non foglia è detto nodo interno.
+• se due nodi hanno lo stesso padre sono detti fratelli (sibling).
+• il cammino da un nodo u a un nodo u′ in un albero T è una sequenza di nodi < n0, n1, . . . , nk > tali che u = n0 e u′ = nk.
+• la lunghezza di un cammino è il numero degli archi del cammino, o il numero di nodi che formano il cammino meno uno. esiste sempre un cammino di lunghezza zero che va da u a u.
+• sia x un nodo in un albero radicato T con radice r. un nodo qualsiasi y in un cammino che parte da r e arriva a x è detto antenato di x. ogni nodo è antenato di sé stesso.
+• se y è antenato di x, allora x è discendente di y. ogni nodo è quindi antenato e discendente di sé stesso
+• se y è un antenato di x e x è diverso da y, allora y è un antenato proprio di x, e x è un discendente proprio di y.
+• il sottoalbero con radice in x è l’albero indotto dai discendenti di x.
+• la profondità di un nodo x è la lunghezza del cammino dalla radice a x.
+• un livello di un albero è costituito da tutti i nodi che stanno alla stessa profondità.
+• l’altezza di un nodo è la lunghezza del più lungo cammino che scende dal nodo x a una foglia. l’altezza di un albero è l’altezza della sua radice, ed è anche uguale alla profondità massima di un qualsiasi nodo dell’albero.
+
+esistono diversi tipi di alberi da cui possiamo distinguere gli alberi binari e gli alberi k-ari e anche k-ari completi
+un albero binario è un albero definito in modo ricorsivo:
+• un albero vuoto è un albero binario.
+• un albero costituito da un nodo radice, da un albero binario (detto sottoalbero sinistro della radice) e da un albero binario (detto sottoalbero destro della radice) è un albero binario.
+un albero k-ario è un albero in cui i figli di un nodo sono etichettati con interi positivi distinti e le etichette maggiori di k sono assenti.
+un albero binario è un caso particolare di albero k-ario, avente k = 2.
+un albero k-ario completo è un albero k-ario in cui valgono le seguenti caratteristiche:
+• tutte le foglie hanno la stessa profondità
+• tutti i nodi interni hanno grado k (hanno esattamente k figli)
+
+l'implementazione degli alberi e' strettamente vincolata al tipo di albero, poi alcune sono piu addate per un tipo piuttosto che un'altro
