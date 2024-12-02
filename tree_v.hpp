@@ -55,9 +55,6 @@ namespace ds {
             void clear() {
                 a.clear();
             }
-            tree new_tree() const {
-                return tree();
-            }
             tree& operator=(tree const& other) {
                 if(this != &other) {
                     a = other.a;
