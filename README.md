@@ -13,12 +13,12 @@ implemented:
 3. stacks, implemented using both lists and vectors
 4. queues, implemented using both lists and vectors
 5. dictionaries
+6. trees
 
 coming in future versions:
-2. trees
-3. sets
-4. pairs
-5. hashmaps
-6. graphs
+1. sets
+2. pairs
+3. hashmaps
+4. graphs
 
 i promise there will be more updates and expanded functionality!
