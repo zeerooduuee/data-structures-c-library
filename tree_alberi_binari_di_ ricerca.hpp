@@ -295,6 +295,41 @@ namespace ds {
                     }
                     root = crea_bst_ottimizzato_aux(w, 0, w.size() - 1, nullptr);
                 }
+                /* visita dei nodi dell'albero in modo ordinato, cioe lettura in ordine crescente e decrescente */
+                // crescenete
+                void visita_crescente_ricorsiva_aux(node<T>* n) const {
+                    if(n) {
+                        visita_crescente_ricorsiva_aux(n->left);
+                        // visita
+                        visita_crescente_ricorsiva_aux(n->right);
+                    }
+                }
+                void visita_crescente_ricorsiva() const {
+                    visita_crescente_ricorsiva_aux(root);
+                }
+                void visita_crescente_iterativa() const {
+                    node<T>* n = minimo();
+                    do {
+                        // visita
+                    } while(n = successore(n));
+                }
+                // decrescente
+                void visita_decrescente_ricorsiva_aux(node<T>* n) const {
+                    if(n) {
+                        visita_decrescente_ricorsiva_aux(n->right);
+                        // visita
+                        visita_decrescente_ricorsiva_aux(n->left);
+                    }
+                }
+                void visita_decrescente_ricorsiva() const {
+                    visita_decrescente_ricorsiva_aux(root);
+                }
+                void visita_decrescente_iterativa() const {
+                    node<T>* n = massimo();
+                    do {
+                        // visita
+                    } while(n = predecessore(n));
+                }
             protected:
             };
         }
