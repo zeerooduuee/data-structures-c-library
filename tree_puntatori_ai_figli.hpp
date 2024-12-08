@@ -17,18 +17,18 @@
 #include <stack>
 #include <queue>
 
-template <typename T>
-struct record {
-    T data;
-    record* p;
-    record* left;
-    // record* center;
-    record* right;
-};
-
 namespace ds {
     namespace sc {
         namespace pf {
+            template <typename T>
+            struct record {
+                T data;
+                record* p;
+                record* left;
+                // record* center;
+                record* right;
+            };
+
             template <typename T>
             class tree {
             private:
