@@ -9,16 +9,22 @@ my data structures library implemented in c++
 # contents
 implemented:
 1. vectors
-2. lists, singly linked lists (doubly linked and circular linked lists planned for future versions)
+2. linked lists
 3. stacks, implemented using both lists and vectors
 4. queues, implemented using both lists and vectors
-5. dictionaries
-6. trees
+5. dictionaries, implemented using both lists and vectors
+6. trees, implementati per vettore, vettore posizionale, puntatore ai figli, puntatore a figlio sinistro e fratello destro e bst (binary search tree) albero binario di ricerca
+7. algoritmo di binary search per trovare chiave e occorenza piu a destra e sinistra
+8. algoritmo bubble sort
+9. algoritmo insertion sort
 
 coming in future versions:
 1. sets
 2. pairs
 3. hashmaps
 4. graphs
+5. algoritmo merge sort
+6. algoritmo quick sort
+7. algoritmo heap sort
 
 i promise there will be more updates and expanded functionality
