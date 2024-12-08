@@ -1,5 +1,5 @@
 # data-structures-cpp-library
-version 1.0 for my data structures library implemented in c++
+my data structures library implemented in c++
 
 # disclaimer
 1. this library is a work in progress. future versions will include missing components and algorithms.
@@ -21,4 +21,4 @@ coming in future versions:
 3. hashmaps
 4. graphs
 
-i promise there will be more updates and expanded functionality!
+i promise there will be more updates and expanded functionality
