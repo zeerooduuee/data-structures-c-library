@@ -5,7 +5,7 @@
 #include <stdexcept>
 #include <vector>
 
-/* albero implementato con vettore posizionale */
+/* albero implementato con vettore p */
 /*
  *  per questa rappresentazione, supponiamo di avere un albero k-ario con k ≥ 2, ogni nodo del quale ha una posizione prestabilita nella struttura.
  *  sia T = (N, A) un albero k-ario completo, w è un vettore di dimensione n tale che w[v] contiene l’informazione associata al nodo v e i nodi vengono considerati
@@ -17,7 +17,7 @@
 
 namespace sd {
     namespace v {
-        namespace posizionale {
+        namespace p {
             template <typename T>
             class tree {
             private:
