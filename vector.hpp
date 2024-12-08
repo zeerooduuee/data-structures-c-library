@@ -4,7 +4,7 @@
 #include <iostream>
 #include <stdexcept>
 
-namespace ds {
+namespace sd {
     template <typename T>
     class vector {
     private:

@@ -12,7 +12,7 @@
 #include <stdexcept>
 #include <list>
 
-namespace ds {
+namespace sd {
     namespace l {
         template <typename T>
         class queue {

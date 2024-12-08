@@ -15,7 +15,7 @@
 #include <stack>
 #include <queue>
 
-namespace ds {
+namespace sd {
     namespace sc {
         namespace fsfd {
             template <typename T>
@@ -201,7 +201,7 @@ namespace ds {
 
 /* non importa il tipo di albero e come e' costruito se si continua a salire da un qualsiasi x nodo alla fine si arriva alla root */
 template <typename T>
-void visita_dfs_stack(ds::sc::fsfd::tree<T> const& a, ds::sc::fsfd::node<T>* nodo) {
+void visita_dfs_stack(sd::sc::fsfd::tree<T> const& a, sd::sc::fsfd::node<T>* nodo) {
     bool match = false;
     while(nodo && !match) {
         if(nodo == a.get_root()) {

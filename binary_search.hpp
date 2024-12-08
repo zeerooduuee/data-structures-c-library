@@ -2,10 +2,10 @@
 #define STRUTTURE_DATI_BINARY_SEARCH_HPP
 
 /*
- * la binary search (ricerca binaria) e' una funzione di ricerca su vettori ordinati (strutture dati lineari con accesso diretto tramite indice e ordinate)
+ * la binary bst (ricerca binaria) e' una funzione di ricerca su vettori ordinati (strutture dati lineari con accesso diretto tramite indice e ordinate)
  * per trovare se un certo elemento e' presente in complessita O(logn).
- * la pre condizione per l'utilizzo di una qualsiasi binary search e' che il vettore sia ordinato in modo crescente o dicrescente
- * (dipendendo cambia l'implementazione) e ci sono diverse varianti di questo. la binary search di solito restituisce un bool, true se la chiave era presente nel vettore o false altrimenti, o direttamente
+ * la pre condizione per l'utilizzo di una qualsiasi binary bst e' che il vettore sia ordinato in modo crescente o dicrescente
+ * (dipendendo cambia l'implementazione) e ci sono diverse varianti di questo. la binary bst di solito restituisce un bool, true se la chiave era presente nel vettore o false altrimenti, o direttamente
  * la posizione di un qualunque elemento che matcha la chiave o throwa una eccezione in caso di chiave non presente.
  */
 
@@ -16,7 +16,7 @@
 // molto importante ricordarsi che in c++ il cast da double a int e' verso il basso sempre, cio vuol dire che qualcosa tipo int x = 0.75; diventa x = 0; dato che il valore viene troncato e la parte decimale eliminata
 // si consideri un vettore ordinato in ordine crescente, la logica per l'ordine dicrescente e' la stessa
 
-/* basic search */
+/* basic bst */
 int basic_search(std::vector<int> const& w, int k) {
     for(int i = 0; i != w.size(); ++i) {
         if(k == w.at(i)) {
@@ -26,7 +26,7 @@ int basic_search(std::vector<int> const& w, int k) {
     return -1;
 }
 
-/* binary search ricorsiva */
+/* binary bst ricorsiva */
 // funzione di setup (solita cosa sulle funzioni ricorsive, dove una funzione fa il setup e gestisce le piccole cose) ma poi la risoluzione del problema avviene nella funzione ricorsiva ausiliare
 int search_ricorsiva_aux(std::vector<int> const& w, int k, int left, int right) {
     if(left > right) { return -1; }
@@ -40,7 +40,7 @@ int search_ricorsiva(std::vector<int> const& w, int k) {
 }
 
 
-/* binary search iterativa */
+/* binary bst iterativa */
 int search_iterativa(std::vector<int> const& w, int k) {
     int left = 0;
     int right = w.size() -1;
@@ -62,7 +62,7 @@ int search_iterativa(std::vector<int> const& w, int k) {
  * nel caso si ha vettori ordinati ma con ripetizione delgi elementi all'interno, essendo che questi sono in ordine allora gli elementi ripetuti saranno uno dietro l'altro
  */
 // queste potrebbero essere sia ricorsive che iterative, ma faro le iterative
-/* left-most binary search */
+/* left-most binary bst */
 int left_most_search(std::vector<int> const& w, int k) {
     int left = 0;
     int right = w.size() -1;
@@ -81,7 +81,7 @@ int left_most_search(std::vector<int> const& w, int k) {
     return result;
 }
 
-/* right-most binary search */
+/* right-most binary bst */
 int right_most_search(std::vector<int> const& w, int k) {
     int left = 0;
     int right = w.size() -1;

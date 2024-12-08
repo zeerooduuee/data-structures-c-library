@@ -15,7 +15,7 @@
 // l’i-esimo figlio di v è in posizione k · v + 1 + i, i ∈ {0, . . . , k − 1}, primo filgio e' i = 0, secondo i = 1 e cosi
 // il padre del nodo f, f  != 0, è in posizione (f - 1) / k, cioe questo ci da la posizione del nodo padre del nodo f
 
-namespace ds {
+namespace sd {
     namespace v {
         namespace posizionale {
             template <typename T>

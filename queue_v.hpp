@@ -28,7 +28,7 @@
         }
 */
 
-namespace ds {
+namespace sd {
     namespace v {
         template <typename T>
         class queue {

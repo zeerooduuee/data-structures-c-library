@@ -15,7 +15,7 @@
 #include <iostream>
 #include <stdexcept>
 
-namespace ds {
+namespace sd {
     namespace l {
         template <typename A, typename B>
         class dictionary {
@@ -51,7 +51,7 @@ namespace ds {
                 if(current) {
                     return current->data;
                 }
-                throw std::logic_error("ERROR: 'search' method call on key not found on dictionary"); // this should be handled differently depending on the implementation
+                throw std::logic_error("ERROR: 'bst' method call on key not found on dictionary"); // this should be handled differently depending on the implementation
             }
             /* l’algoritmo consiste in una semplice aggiunta di un elemento in testa ad una lista doppiamente concatenata, con la sistemazione dei puntatori
              * che tale operazione richiede. a differenza della insert() dell’implementazione con gli array, questa operazione non si preoccupa di aggiornare il valore del record contenente la

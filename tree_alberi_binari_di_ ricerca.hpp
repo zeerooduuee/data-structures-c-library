@@ -16,9 +16,9 @@
 #include <queue>
 #include <vector>
 
-namespace ds {
+namespace sd {
     namespace sc {
-        namespace search {
+        namespace bst {
             template <typename T>
             // il tipo T deve supportare gli operatori ==, !=, <, <=, > e >=
             struct node {
@@ -124,7 +124,7 @@ namespace ds {
                 /* predecessore e successore */
                 // successore
                 /*
-                 * in a binary search tree the successor operation aims to find a node that is bigger than the given node, but that has the minimum possible value among all the options,
+                 * in a binary bst tree the successor operation aims to find a node that is bigger than the given node, but that has the minimum possible value among all the options,
                  * meaning that we want to find the lowest-key-value node that is also bigger than the given node. the name successor makes sense since we are looking for the "next" node as in ascending order.
                  * there's three possible scenarios:
                  * 1. the given node is already the biggest-key-value node, so we just return NIL

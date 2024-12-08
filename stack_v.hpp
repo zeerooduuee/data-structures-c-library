@@ -12,7 +12,7 @@
 #include <stdexcept>
 #include <vector>
 
-namespace ds {
+namespace sd {
     namespace v {
         template <typename T>
         class stack {

@@ -13,7 +13,7 @@
 #include <stdexcept>
 #include <vector>
 
-namespace ds {
+namespace sd {
     namespace v {
         template <typename A, typename B>
         class dictionary {
@@ -45,7 +45,7 @@ namespace ds {
             B search(A const& k) const{
                 int i = search_index(k, 0, a.size());
                 if(i == -1) {
-                    throw std::logic_error("ERROR: 'search' method call on key not found on dictionary"); // this should be handled differently depending on the implementation
+                    throw std::logic_error("ERROR: 'bst' method call on key not found on dictionary"); // this should be handled differently depending on the implementation
                 }
                 return a[i].second;
             }
