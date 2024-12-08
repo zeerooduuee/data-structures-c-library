@@ -12,9 +12,9 @@
 #include <iostream>
 #include <vector>
 
-// a modo di fare le cose piu semplici lavoreremo con un vettore di interi, anche se ovviamente potrebbe essere di tipo generico T
+// per semplicita si consideri un vettore di interi, anche se ovviamente potrebbe essere di tipo generico T, se supporta operatore ==, < e >
 // molto importante ricordarsi che in c++ il cast da double a int e' verso il basso sempre, cio vuol dire che qualcosa tipo int x = 0.75; diventa x = 0; dato che il valore viene troncato e la parte decimale eliminata
-// assumiamo che l'ordine del vettore e' ascending
+// si consideri un vettore ordinato in ordine crescente, la logica per l'ordine dicrescente e' la stessa
 
 /* basic search */
 int basic_search(std::vector<int> const& w, int k) {
