@@ -23,44 +23,41 @@
 // come l'insertion sort anche il bubble sort e' consigliato per input di dimensioni ridotte
 
 namespace alg {
-    namespace v {
-        void bubble_sort(std::vector<int>& w) {
-            bool swapped;
+    void bubble_sort(std::vector<int>& w) {
+        bool swapped;
 
-            for (int i = 0; i < w.size() - 1; ++i) {
-                swapped = false;
-                for (int j = 0; j < w.size() - i - 1; ++j) {
-                    if (w[j] > w[j + 1]) {
-                        std::swap(w[j], w[j + 1]);
-                        swapped = true;
-                    }
+        for (int i = 0; i < w.size() - 1; ++i) {
+            swapped = false;
+            for (int j = 0; j < w.size() - i - 1; ++j) {
+                if (w[j] > w[j + 1]) {
+                    std::swap(w[j], w[j + 1]);
+                    swapped = true;
                 }
-                if (!swapped) break;
             }
+            if (!swapped) break;
         }
     }
-    namespace l {
-        void bubble_sort(std::list<int>& l) {
-            if (l.empty() || l.size() == 1) { return; }
 
-            auto end = l.end(); // auto sta per std::list<int>::iterator
-            bool swapped;
+    void bubble_sort(std::list<int>& l) {
+        if (l.empty() || l.size() == 1) { return; }
 
-            do {
-                swapped = false;
-                auto it = l.begin();
+        auto end = l.end(); // auto sta per std::list<int>::iterator
+        bool swapped;
 
-                while (std::next(it) != end) {
-                    if (*it > *std::next(it)) {
-                        std::swap(*it, *std::next(it));
-                        swapped = true;
-                    }
-                    ++it;
+        do {
+            swapped = false;
+            auto it = l.begin();
+
+            while (std::next(it) != end) {
+                if (*it > *std::next(it)) {
+                    std::swap(*it, *std::next(it));
+                    swapped = true;
                 }
+                ++it;
+            }
 
-                end = std::prev(end);
-            } while(swapped);
-        }
+            end = std::prev(end);
+        } while(swapped);
     }
 }
 
