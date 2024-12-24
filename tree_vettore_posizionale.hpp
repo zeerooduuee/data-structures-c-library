@@ -11,8 +11,8 @@
  *  sia T = (N, A) un albero k-ario completo, w è un vettore di dimensione n tale che w[v] contiene l’informazione associata al nodo v e i nodi vengono considerati
  *  indici interi che poi sono letti all'interno del vettore w.
  */
-// 0 e' la posizione della radice
-// l’i-esimo figlio di v è in posizione k · v + 1 + i, i ∈ {0, . . . , k − 1}, primo filgio e' i = 0, secondo i = 1 e cosi
+// 0 è la posizione della radice
+// l’i-esimo figlio di v è in posizione k · v + 1 + i, i ∈ {0, . . . , k − 1}, primo filgio è i = 0, secondo i = 1 e cosi
 // il padre del nodo f, f  != 0, è in posizione (f - 1) / k, cioe questo ci da la posizione del nodo padre del nodo f
 
 namespace sd {
@@ -28,9 +28,9 @@ namespace sd {
                 void add(T const& data) {
                     w.push_back(data);
                     /*
-                     * pero e' da considerarsi un vettore dove ogni livello dell'albero deve essere completo
+                     * pero è da considerarsi un vettore dove ogni livello dell'albero deve essere completo
                      * per cio se k = 3
-                     * se si aggiunge un elemento pos = 0, allora questo e' la radice, ma poi se si vuole aggiungere nuovamente allora ne servono 3 e da pos = 1 fino a  pos = 3 saranno quelli a livello 1 e poi 9 e coso per che sia completo
+                     * se si aggiunge un elemento pos = 0, allora questo è la radice, ma poi se si vuole aggiungere nuovamente allora ne servono 3 e da pos = 1 fino a  pos = 3 saranno quelli a livello 1 e poi 9 e coso per che sia completo
                      */
                 }
                 void clear() {

@@ -79,14 +79,14 @@ namespace sd {
                  * 5        visita il nodo n
                  * 6        S = S U {figli di n}
                  * l’algoritmo di visita applicato alla radice di un albero con n nodi termina in O(n) iterazioni. Lo spazio utilizzato è O(n).
-                 * l'idea e' quella di poi tradurre queste visite ad alberi diversi anche generici con nodi x di grado arbitrario
+                 * l'idea è quella di poi tradurre queste visite ad alberi diversi anche generici con nodi x di grado arbitrario
                  */
                 /* visita in profondità - Depth-First Search (DFS) */
                 /*
                  * per questo algoritmo faremo uso di una struttura dati a pila/stack S, dotata di politica LIFO.
                  * versione non ricorsiva.
                  */
-                // per gli algoritmi di visita implementati con stack o queue non e' del tutto importante quando avviene la visita, se prima o dopo le push, ma dipendendo dallo scopo potrebbe essere relevante (tipo per i distruttori)
+                // per gli algoritmi di visita implementati con stack o queue non è del tutto importante quando avviene la visita, se prima o dopo le push, ma dipendendo dallo scopo potrebbe essere relevante (tipo per i distruttori)
                 // volendo si puo dare come parametro il nodo (radice indotta) da cui comincare la visita, ma in questo caso faremmo dalla root
                 void visitaDFS_stack() {
                     std::stack<record<T>*> s;

@@ -7,7 +7,7 @@
  * gli n nodi dell'albero P vanno da 0 ad n - 1, P[v].info è il contenuto informativo, P[v].parent == u se e solo se vi è un arco (u, v) ∈ A, se v è la radice, P[v].parent == -1
  * P.length contiene il numero di nodi dell’albero
  */
-/* questa implementazione supporta alberi generici ma non e' la migliore per alberi k-ari o binari */
+/* questa implementazione supporta alberi generici ma non è la migliore per alberi k-ari o binari */
 
 #include <iostream>
 #include <stdexcept>
@@ -19,8 +19,8 @@ namespace ds {
         private:
             std::vector<std::pair<T, int>> a;
             /*
-             * ogni elemento del vettore e' considerato un nodo, del quale si tiene traccia dell'indice (relativo alla posizine dentro il vettore), una certa informazione (data) di tipo T e un int che contiene
-             * la posiszione dentro al vettore del nodo padre, per il nodo radice questo int e' -1
+             * ogni elemento del vettore è considerato un nodo, del quale si tiene traccia dell'indice (relativo alla posizine dentro il vettore), una certa informazione (data) di tipo T e un int che contiene
+             * la posiszione dentro al vettore del nodo padre, per il nodo radice questo int è -1
              */
         public:
             void add(T const& d, int p) {

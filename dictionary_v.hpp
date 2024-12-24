@@ -67,7 +67,7 @@ namespace sd {
                 }
             }
             /* K deve essere presente nel dizionario, il metodo cancella da questo la coppia avente chiave K */
-            // erase sta per delete ma delete e' anche keyword del linguaggio
+            // erase sta per delete ma delete è anche keyword del linguaggio
             void erase(A const& k) {
                 int i = search_index(k, 0, a.size());
                 if(i == -1) {

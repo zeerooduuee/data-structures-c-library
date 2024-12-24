@@ -151,7 +151,7 @@ namespace sd {
                  * le casistiche e gli algoritmi relativi alla ricerca del predecessore di un nodo x appartenente ad un albero binario di ricerca sono analoghi a quelli di ricerca del successore, ma invertiti.
                  * se x ha un figlio sinistro, allora il predecessore sarà il massimo del sottoalbero sinistro di x, altrimenti sarà l’antenato più prossimo di x il cui
                  * figlio destro è anch’esso antenato di x. per trovarlo, si risale da x verso la radice fino a incontrare la prima svolta a sinistra.
-                 * cioe in pratica il predecessore di un nodo e' il nodo "precedente" in ordine crescente di un certo nodo
+                 * cioe in pratica il predecessore di un nodo è il nodo "precedente" in ordine crescente di un certo nodo
                  */
                 node<T>* predecessore(node<T>* x) const {
                     if(!x) {
@@ -229,9 +229,9 @@ namespace sd {
                     if(!u->padre) {
                         root = v;
                     } else {
-                        if(u->padre->left == u) { // u e' il figlio sinistro del padre
+                        if(u->padre->left == u) { // u è il figlio sinistro del padre
                             u->padre->left = v;
-                        } else { // u e' il figlio destro del padre
+                        } else { // u è il figlio destro del padre
                             u->padre->right = v;
                         }
                     }
@@ -267,7 +267,7 @@ namespace sd {
                  * ma qual è la condizione che ci porta ad avere albero fortemente sbilanciato? supponiamo di avere un vettore di elementi strettamente crescenti o decrescenti che vogliamo
                  * trasformare in un albero binario di ricerca attraverso il seguente algoritmo.
                  */
-                // questo algoritmo e' ok nel caso di un vettore casuale ma comunque e' sempre O(n2) dato che potrebbe che casualmente gli elementi sono ordinati e quindi creare un albero sbilanciato
+                // questo algoritmo è ok nel caso di un vettore casuale ma comunque è sempre O(n2) dato che potrebbe che casualmente gli elementi sono ordinati e quindi creare un albero sbilanciato
                 void build_bst(std::vector<T> const& w) {
                     for(int i = 0; i != w.size(); ++i) {
                         insert(w.at(i));
@@ -279,7 +279,7 @@ namespace sd {
                  */
                 // c'e comunque un modo di migliorare questo algoritmo, supponiamo sempre di avere un vettore completamente ordinato in modo crescente
                 // per utilizzare questo algoritmo serve che l'insieme di elementi sia ordinato in modo (crescente o decrescente) da scegliere e da tempo di esecuzione O(logn)
-                // nel caso ci venga dato un vettore casuale e' meglio ordinarlo e poi applicare questo algoritmo che quello precedente, dato che questo da tempo di esecuzione O(nlogn)
+                // nel caso ci venga dato un vettore casuale è meglio ordinarlo e poi applicare questo algoritmo che quello precedente, dato che questo da tempo di esecuzione O(nlogn)
                 node<T>* crea_bst_ottimizzato_aux(std::vector<T> const& w, int left, int right, node<T>* p) {
                     if(left > right) { return nullptr; }
                     int m = (left + right) / 2; // int m = left + (right - left) / 2;

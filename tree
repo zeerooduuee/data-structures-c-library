@@ -36,7 +36,7 @@ un albero k-ario completo è un albero k-ario in cui valgono le seguenti caratte
 • tutte le foglie hanno la stessa profondità
 • tutti i nodi interni hanno grado k (hanno esattamente k figli)
 
-l'implementazione degli alberi e' strettamente vincolata al tipo di albero, poi alcune sono piu addate per un tipo piuttosto che un'altro
+l'implementazione degli alberi è strettamente vincolata al tipo di albero, poi alcune sono piu addate per un tipo piuttosto che un'altro
 
 alberi binari bilanciati
 • definizione Un albero binario è bilanciato se h = O(log n).

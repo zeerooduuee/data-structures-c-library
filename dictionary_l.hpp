@@ -68,7 +68,7 @@ namespace sd {
                 head = new_record;
             }
             /* dato che l’insert non aggiorna il valore delle chiavi qualora queste siano già presenti, bisogna scorrere tutta la lista per rimuovere tutte le occorrenze della chiave K. */
-            // erase sta per delete ma delete e' anche keyword del linguaggio
+            // erase sta per delete ma delete è anche keyword del linguaggio
             void erase(A const& k) {
                 if(!head) {
                     throw std::logic_error("ERROR: 'erase' method call on empty dictionary");

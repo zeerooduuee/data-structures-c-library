@@ -2,9 +2,9 @@
 #define STRUTTURE_DATI_BINARY_SEARCH_HPP
 
 /*
- * la binary bst (ricerca binaria) e' una funzione di ricerca su vettori ordinati (strutture dati lineari con accesso diretto tramite indice e ordinate)
- * per trovare se un certo elemento e' presente in complessita O(logn).
- * la pre condizione per l'utilizzo di una qualsiasi binary bst e' che il vettore sia ordinato in modo crescente o dicrescente
+ * la binary bst (ricerca binaria) è una funzione di ricerca su vettori ordinati (strutture dati lineari con accesso diretto tramite indice e ordinate)
+ * per trovare se un certo elemento è presente in complessita O(logn).
+ * la pre condizione per l'utilizzo di una qualsiasi binary bst è che il vettore sia ordinato in modo crescente o dicrescente
  * (dipendendo cambia l'implementazione) e ci sono diverse varianti di questo. la binary bst di solito restituisce un bool, true se la chiave era presente nel vettore o false altrimenti, o direttamente
  * la posizione di un qualunque elemento che matcha la chiave o throwa una eccezione in caso di chiave non presente.
  */
@@ -13,8 +13,8 @@
 #include <vector>
 
 // per semplicita si consideri un vettore di interi, anche se ovviamente potrebbe essere di tipo generico T, se supporta operatore ==, < e >
-// molto importante ricordarsi che in c++ il cast da double a int e' verso il basso sempre, cio vuol dire che qualcosa tipo int x = 0.75; diventa x = 0; dato che il valore viene troncato e la parte decimale eliminata
-// si consideri un vettore ordinato in ordine crescente, la logica per l'ordine dicrescente e' la stessa
+// molto importante ricordarsi che in c++ il cast da double a int è verso il basso sempre, cio vuol dire che qualcosa tipo int x = 0.75; diventa x = 0; dato che il valore viene troncato e la parte decimale eliminata
+// si consideri un vettore ordinato in ordine crescente, la logica per l'ordine dicrescente è la stessa
 
 /* basic bst */
 int basic_search(std::vector<int> const& w, int k) {

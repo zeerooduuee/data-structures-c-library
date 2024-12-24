@@ -199,7 +199,7 @@ namespace sd {
     }
 }
 
-/* non importa il tipo di albero e come e' costruito se si continua a salire da un qualsiasi x nodo alla fine si arriva alla root */
+/* non importa il tipo di albero e come è costruito se si continua a salire da un qualsiasi x nodo alla fine si arriva alla root */
 template <typename T>
 void visita_dfs_stack(sd::sc::fsfd::tree<T> const& a, sd::sc::fsfd::node<T>* nodo) {
     bool match = false;
