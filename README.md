@@ -17,14 +17,16 @@ implemented:
 7. algoritmo di binary search per trovare chiave e occorenza piu a destra e sinistra
 8. algoritmo bubble sort
 9. algoritmo insertion sort
+10. algoritmo merge sort
+11. algoritmo quick sort
+12. algoritmo heap sort
 
 coming in future versions:
 1. sets
 2. pairs
 3. hashmaps
 4. graphs
-5. algoritmo merge sort
-6. algoritmo quick sort
-7. algoritmo heap sort
+5. priority queues
+6. piu algoritmi di ordinamento
 
 i promise there will be more updates and expanded functionality
