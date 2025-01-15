@@ -39,5 +39,5 @@ un albero k-ario completo è un albero k-ario in cui valgono le seguenti caratte
 l'implementazione degli alberi è strettamente vincolata al tipo di albero, poi alcune sono piu addate per un tipo piuttosto che un'altro
 
 alberi binari bilanciati
-• definizione Un albero binario è bilanciato se h = O(log n).
+• definizione un albero binario è bilanciato se h = O(log n).
 • un albero completo è un albero bilanciato, ma un albero bilanciato non è necessariamente completo.
